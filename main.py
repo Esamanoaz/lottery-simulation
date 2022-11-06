@@ -9,11 +9,12 @@ def check_ticket(odds, jackpot):
     return False #else, return False
 
 
-odds = 292201338 # the odds of winning the powerball jackpot
+amount = 1 # amount of tickets purchased per week | 4264 weeks of life from year 18-100
+odds = int(292201338/amount) # the odds of winning the powerball jackpot
 jackpot = random.randrange(0, odds)
 winner = False
 tickets = 0
-price = 2
+price = 2 * amount
 cost = 0
 prize = 1600000000
 
