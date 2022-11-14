@@ -2,7 +2,7 @@ import random as random
 import time
 
 def check_ticket(odds, jackpot):
-    ticket = random.randrange(0, odds)
+    ticket = random.randrange(0, odds + 1)
     #print(ticket, jackpot, '\n')
     if ticket == jackpot:
         return True
@@ -11,7 +11,7 @@ def check_ticket(odds, jackpot):
 
 amount = 1 # amount of tickets purchased per week | 4264 weeks of life from year 18-100
 odds = int(292201338/amount) # the odds of winning the powerball jackpot
-jackpot = random.randrange(0, odds)
+jackpot = random.randrange(0, odds + 1)
 winner = False
 tickets = 0
 price = 2 * amount
